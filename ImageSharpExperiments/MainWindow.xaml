@@ -22,7 +22,7 @@
                 
             </StackPanel.Resources>
             <TextBlock>x: </TextBlock>
-            <TextBox x:Name="xTextBox" Width="50" TextChanged="RecalculateFrames" Text="122" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="xTextBox" Width="50" TextChanged="RecalculateFrames" Text="147" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>y:</TextBlock>
             <TextBox x:Name="yTextBox" Width="50" TextChanged="RecalculateFrames" Text="210" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>width:</TextBlock>
@@ -30,7 +30,9 @@
             <TextBlock>height:</TextBlock>
             <TextBox x:Name="heightTextBox" Width="50" TextChanged="RecalculateFrames" Text="50" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>milliseconds:</TextBlock>
-            <TextBox x:Name="msTextBox" Width="50" Text="100" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="msTextBox" Width="50" Text="200" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBlock>frames:</TextBlock>
+            <TextBox x:Name="framesTextBox" Width="50" Text="3" TextChanged="RecalculateFrames" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
         </StackPanel>
 
         <Grid Grid.Row="1">

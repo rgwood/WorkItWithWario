@@ -40,19 +40,20 @@ namespace ImageSharpExperiments
         {
             _frames = new ObservableCollection<BitmapSource>();
 
-            if (xTextBox is null || yTextBox is null || widthTextBox is null || heightTextBox is null || WholeImage is null)
+            if (xTextBox is null || yTextBox is null || widthTextBox is null || heightTextBox is null || WholeImage is null || framesTextBox is null)
                 return;
 
             int originX = ParseInt(xTextBox.Text);
             int originY = ParseInt(yTextBox.Text);
             int width = ParseInt(widthTextBox.Text, 1);
             int height = ParseInt(heightTextBox.Text, 1);
+            int frames = ParseInt(framesTextBox.Text, 1);
 
             using var img = IS.Image.Load<Rgba32>(@"C:\Users\reill\OneDrive\Documents\ImageSharpTests\WorkItWithWario.png");
 
             var frameCoordinates = new List<RectangleF>();
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < frames; i++)
             {
                 int x = originX + width * i;
                 int y = originY;
@@ -92,17 +93,25 @@ namespace ImageSharpExperiments
 
             while (true)
             {
-                int millis = ParseInt(msTextBox.Text, 100);
-                await Task.Delay(millis);
-
-                FrameImage.Source = _frames[i];
-
-                i++;
-
-                if(i >= _frames.Count)
+                try
                 {
-                    i = 0;
+                    int millis = ParseInt(msTextBox.Text, 100);
+                    await Task.Delay(millis);
+
+                    FrameImage.Source = _frames[i];
+
+                    i++;
+
+                    if (i >= _frames.Count)
+                    {
+                        i = 0;
+                    }
                 }
+                catch (Exception)
+                {
+                    // HACK: add proper thread safety later
+                }
+
             }
         }
 
