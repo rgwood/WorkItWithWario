@@ -7,7 +7,7 @@
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
         mc:Ignorable="d"
-        Title="Work It With Wario" Height="450" Width="600">
+        Title="Work It With Wario" Height="450" Width="700">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,13 +22,13 @@
                 
             </StackPanel.Resources>
             <TextBlock>x: </TextBlock>
-            <TextBox x:Name="xTextBox" Width="50" TextChanged="RecalculateFrames" Text="147" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="xTextBox" Width="50" TextChanged="RecalculateFrames" Text="148" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>y:</TextBlock>
-            <TextBox x:Name="yTextBox" Width="50" TextChanged="RecalculateFrames" Text="210" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="yTextBox" Width="50" TextChanged="RecalculateFrames" Text="220" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>width:</TextBlock>
-            <TextBox x:Name="widthTextBox" Width="50" TextChanged="RecalculateFrames" Text="25" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="widthTextBox" Width="50" TextChanged="RecalculateFrames" Text="24" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>height:</TextBlock>
-            <TextBox x:Name="heightTextBox" Width="50" TextChanged="RecalculateFrames" Text="50" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
+            <TextBox x:Name="heightTextBox" Width="50" TextChanged="RecalculateFrames" Text="40" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>milliseconds:</TextBlock>
             <TextBox x:Name="msTextBox" Width="50" Text="200" ui:TextBoxHelper.IsDeleteButtonVisible="False"/>
             <TextBlock>frames:</TextBlock>

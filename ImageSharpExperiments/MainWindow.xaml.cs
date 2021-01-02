@@ -70,6 +70,10 @@ namespace ImageSharpExperiments
                 img.Mutate(a => a.Draw(IS.Color.Red, 2, coords));
             }
 
+            // TODO remove this
+            // throw away the bottom part of the image for display purposes
+            img.Mutate(async => async.Crop(new IS.Rectangle(0,0,img.Width, img.Height - 380)));
+
             WholeImage.Source = Convert(img);
         }
 
