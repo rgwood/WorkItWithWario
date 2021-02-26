@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using SixLabors.ImageSharp;
 using IS = SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -20,7 +12,7 @@ using SixLabors.ImageSharp.Drawing.Processing;
 using System.Collections.ObjectModel;
 using System.IO;
 
-namespace ImageSharpExperiments
+namespace WorkItWithWario
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -49,7 +41,7 @@ namespace ImageSharpExperiments
             int height = ParseInt(heightTextBox.Text, 1);
             int frames = ParseInt(framesTextBox.Text, 1);
 
-            using var img = IS.Image.Load<Rgba32>(@"C:\Users\reill\OneDrive\Documents\ImageSharpTests\WorkItWithWario.png");
+            using var img = IS.Image.Load<Rgba32>("WorkItWithWario.png");
 
             var frameCoordinates = new List<RectangleF>();
 
